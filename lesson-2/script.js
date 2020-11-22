@@ -21,8 +21,8 @@ function getRandomNumber(num) {
 
 
 function task_4() {
-    const num = +prompt('Введите число от 0 до 15');
-    outputNum(num);
+    const a = +prompt('Введите число от 0 до 15');
+    outputNum(a);
 }
 
 function outputNum(num) {
@@ -62,5 +62,46 @@ function outputNum(num) {
         default:
             break;    
     }
+}
+
+function sum(a, b) {
+    return a + b;
+}
+
+function min(a, b) {
+    return a - b;
+}
+
+function mul(a, b) {
+    return a * b;
+}
+
+function div(a, b) {
+    return a / b;
+}
+
+function mathOperation(arg1, arg2, operation) {
+    switch(operation) {
+        case '+':
+            console.log(`Сумма ${sum(arg1, arg2)}`);
+            break;
+        case '-':
+            console.log(`Разность ${min(arg1, arg2)}`);
+            break;
+        case '*':
+            console.log(`Произведение ${mul(arg1, arg2)}`);
+            break;
+        case '/':
+            console.log(`Разность ${div(arg1, arg2)}`); 
+            break;
+    }
+}
+
+function task_5() {
+    const userArg1 = +prompt('Введите целое число');
+    const userArg2 = +prompt('Введите другое целое число');
+    const oper = prompt('Введите один из этих операторов для вычисления', '+, -, *, /');
+
+    mathOperation(userArg1, userArg2, oper);
 }
 
