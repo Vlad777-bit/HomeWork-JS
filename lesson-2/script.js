@@ -2,7 +2,7 @@
 
 function task_3() {
     const a = getRandomNumber(100);
-    const b = getRandomNumber(200);
+    const b = getRandomNumber(200); 
 
     if (a > 0 && b > 0) {
         console.log(`Разность чисел ${a} - ${b} = ${a - b}`);
@@ -97,11 +97,26 @@ function mathOperation(arg1, arg2, operation) {
     }
 }
 
-function task_5() {
+function task_6() {
     const userArg1 = +prompt('Введите целое число');
     const userArg2 = +prompt('Введите другое целое число');
     const oper = prompt('Введите один из этих операторов для вычисления', '+, -, *, /');
 
     mathOperation(userArg1, userArg2, oper);
 }
+
+function task_8() {
+    const number = +prompt('Ввелите число');
+    const p = +prompt('Введите степень, в которую хотите возвести')
+    
+    function power(val, pow) {
+        if (pow >= 0) {
+            return !pow ? 1 : val * power(val, pow -1)
+        }
+    }
+
+    console.log(`Число ${number} в степени ${p} = ${power(number, p)}`)
+}
+
+
 
